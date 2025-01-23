@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODSOFT</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Suraj Satish Fulare</h1>
+            <p class="tagline">Creative Developer | Designer | Problem Solver</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <img src="IMG_6878.jpg" alt="Your Photo" class="profile-photo" >
+            <p>
+                <span class="highlight"> I am a passionate developer with expertise in creating stunning, user-friendly web applications. 
+                With experience in HTML, CSS, JavaScript, and some basic backend technologies, I build solutions that delight users and achieve business goals.</span>
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript </li>
+                <li>Data Analyst</li>
+                <li>Database Management</li>
+            </ul>
+        </div>
+    </section>
+
+
+ <!-- Projects Section -->
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="container">
+        <div class="project">
+            <img src="amazon.png" alt="Amazon Clone ">
+            <h3>Amazon Clone</h3>
+            <p class="description">
+                This project is a basic Amazon clone built using...
+                <span class="more-description"> only HTML and CSS. It replicates the visual design of the Amazon website, including a homepage, product sections, and navigation bar. The focus is on creating a responsive and visually appealing layout that mirrors the style of a professional e-commerce platform. Although it doesn’t include dynamic functionality or a backend, this project showcases design skills and attention to detail in replicating a real-world website.</span>
+            </p>
+            <a href="#" class="read-more"></a>
+        </div>
+        <div class="project">
+            <img src="xampp.png" alt="Online Store Database">
+            <h3>Online Store Database</h3>
+            <p class="description">
+                This project demonstrates a simple store database using...
+                <span class="more-description"> SQL, showcased via the phpMyAdmin interface. The database includes key tables such as:
+
+                    Products: Contains details like product names, prices, descriptions, and stock quantities.
+                    Customers: Stores customer information such as names, contact details, and addresses.
+                    Orders: Tracks customer orders with fields for order IDs, product IDs, quantities, and timestamps.
+                    Inventory: Maintains stock levels for all products.
+                    Using phpMyAdmin, viewers can explore the structure and relationships of these tables, as well as execute SQL queries to perform tasks like viewing all orders, calculating total revenue, and identifying low-stock products. This project highlights practical database design and SQL usage in a real-world scenario.</span>
+            </p>
+            <a href="#" class="read-more"></a>
+        </div>
+    </div>
+
+        <div class="coming-soon">
+            <p>🌟 More exciting projects are on the way! Stay tuned! 🌟</p>
+        </div>
+    </section>
+    <script>// Select all Read More links
+        const readMoreLinks = document.querySelectorAll('.read-more');
+        
+        // Add hover effect to each project
+        readMoreLinks.forEach(link => {
+            link.addEventListener('mouseenter', function () {
+                const project = link.closest('.project');  // Get the project container
+                const description = project.querySelector('.description');
+                const moreDescription = project.querySelector('.more-description');
+                
+                // Expand the description
+                description.style.maxHeight = moreDescription ? moreDescription.offsetHeight + 60 + 'px' : 'auto';
+                
+                // Make the "Read More" link disappear on hover
+                link.style.display = 'none';
+            });
+        
+            link.addEventListener('mouseleave', function () {
+                const project = link.closest('.project');  // Get the project container
+                const description = project.querySelector('.description');
+                
+                // Collapse the description back to normal
+                description.style.maxHeight = '60px';  // Set a max-height for the description when collapsed
+                
+                // Show the "Read More" link again after mouse leaves
+                link.style.display = 'inline-block';
+            });
+        });
+        </script>
+    
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <a href="RESUME.pdf" download class="btn">Take A Look At My Resume</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: surajfulare123@gmail.com</p>
+            <p>Phone: +91 9136817703</p>
+            <p>Feel free to reach out for collaboration or any inquiries!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p> Connect With Me</p>
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.linkedin.com/in/suraj-fulare-a72302259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Suraj02-code" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/s.u.r.a.j_10_/" target="_blank">
+                        <i class="fab fa-instagram"></i>Instagram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+
